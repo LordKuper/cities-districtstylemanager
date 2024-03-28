@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34009.444
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistrictStyleManager", "DistrictStyleManager.csproj", "{EACDD652-4B4C-4C44-8CDD-BC786B40C40D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EACDD652-4B4C-4C44-8CDD-BC786B40C40D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EACDD652-4B4C-4C44-8CDD-BC786B40C40D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EACDD652-4B4C-4C44-8CDD-BC786B40C40D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EACDD652-4B4C-4C44-8CDD-BC786B40C40D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {70BD0637-DAB2-48C7-ABBC-60ABB90A8821}
+	EndGlobalSection
+EndGlobal
