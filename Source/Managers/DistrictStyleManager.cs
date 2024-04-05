@@ -63,9 +63,6 @@ namespace DistrictStyleManager.Managers
                     if (services.ContainsKey(key)) { services[key]++; }
                     else { services[key] = 1; }
                 }
-                Logger.Info($"Buildings in style {style.FullName} = {buildingInfos.Length}");
-                Logger.Info(
-                    $"Services in style {style.FullName}: {string.Join("; ", services.Select(s => $"{s.Key}={s.Value:D}").ToArray())}");
                 field.SetValue(style, affectedServices);
             }
         }

@@ -30,6 +30,7 @@ namespace DistrictStyleManager
             base.OnLoadData();
             try
             {
+                VirtualStyleManager.InitializeVanillaStyle();
                 var byteData = serializableDataManager.LoadData(DataId);
                 if (byteData != null && byteData.Length > 0)
                 {

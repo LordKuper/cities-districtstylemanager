@@ -56,8 +56,10 @@ namespace DistrictStyleManager.Managers
             virtualStyleFullName = $"{VirtualStylePackage}.{virtualStyleName}";
         }
 
-        public static void LoadData()
+        public static void InitializeVanillaStyle()
         {
+            if (DistrictManager.instance.m_Styles.Any(s =>
+                    s.PackageName.Equals(VirtualStylePackage) && s.Name.Equals(VanillaStyleName))) { return; }
             var vanillaBuildings = new HashSet<BuildingInfo>();
             for (uint i = 0; i < PrefabCollection<BuildingInfo>.LoadedCount(); i++)
             {
@@ -72,12 +74,16 @@ namespace DistrictStyleManager.Managers
                 if (building.m_requiredModderPack != 0) { continue; }
                 vanillaBuildings.Add(building);
             }
-            Logger.Info($"vanilla buildings loaded = {vanillaBuildings.Count}");
             if (vanillaBuildings.Count > 0)
             {
                 var style = CreateVirtualStyle(VanillaStyleName);
                 UpdateBuildingInfosInVirtualStyle(vanillaBuildings, style);
             }
+        }
+
+        public static void LoadData()
+        {
+            InitializeVanillaStyle();
             var data = DistrictStyleSerializer.GetSavedData();
             Logger.Info($"data containers loaded = {data.Length}");
             for (var i = 0; i < data.Length; i++)
